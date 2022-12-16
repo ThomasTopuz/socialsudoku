@@ -5,22 +5,37 @@
 //  Created by Thomas Topuz on 14.12.22.
 //
 
+import Swift
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    @State var sudoku : [[Cell]]
+    @State var isLoggedIn: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if (isLoggedIn) {
+            TabView {
+                SudokuView(sudoku: sudoku)
+                    .tabItem {
+                        Image(systemName: "heart.fill")
+                        Text("Game")
+                        
+                    }
+                LeaderboardView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Leaderboard")
+                    }
+            }
+        } else {
+            LoginView(isLoggedIn: $isLoggedIn)
         }
-        .padding()
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(sudoku: SudokuGenerator.generateSudoku())
     }
 }

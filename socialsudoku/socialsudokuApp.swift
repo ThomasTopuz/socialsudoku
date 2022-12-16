@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+import Firebase
+
 
 @main
 struct socialsudokuApp: App {
+    @StateObject private var sudoku = ModelData()
+    @StateObject private var leaderboardService = LeaderboardService()
+    
+    init () {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView(sudoku: SudokuGenerator.generateSudoku()).environmentObject(leaderboardService)
+                //LoginView(isLoggedIn: false)
+            }
         }
     }
 }
