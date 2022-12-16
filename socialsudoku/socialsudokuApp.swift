@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseCore
 import FirebaseAuth
 import Firebase
-
+import GoogleSignIn
 
 @main
 struct socialsudokuApp: App {
@@ -19,6 +19,7 @@ struct socialsudokuApp: App {
     init () {
         FirebaseApp.configure()
     }
+
     
     var body: some Scene {
         WindowGroup {

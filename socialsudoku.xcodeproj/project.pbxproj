@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E912A8A92949D062008E249A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E912A8A82949D062008E249A /* Cell.swift */; };
+		E9503341294C96F200373E43 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E9503340294C96F200373E43 /* GoogleSignIn */; };
+		E9503344294CABC200373E43 /* GoogleAuthManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9503343294CABC200373E43 /* GoogleAuthManger.swift */; };
 		E95B83352949BE1A0027AD51 /* socialsudokuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B83342949BE1A0027AD51 /* socialsudokuApp.swift */; };
 		E95B83372949BE1A0027AD51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B83362949BE1A0027AD51 /* ContentView.swift */; };
 		E95B83392949BE1B0027AD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95B83382949BE1B0027AD51 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		E912A8A82949D062008E249A /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		E9503342294C973A00373E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E9503343294CABC200373E43 /* GoogleAuthManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManger.swift; sourceTree = "<group>"; };
 		E95B83312949BE1A0027AD51 /* socialsudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialsudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95B83342949BE1A0027AD51 /* socialsudokuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialsudokuApp.swift; sourceTree = "<group>"; };
 		E95B83362949BE1A0027AD51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 				E97FA5B2294B0DD600494D46 /* FirebaseFirestore in Frameworks */,
 				E97FA5B0294B0DD600494D46 /* FirebaseAuth in Frameworks */,
 				E97FA5AE294B0DD600494D46 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				E9503341294C96F200373E43 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,7 @@
 		E95B83332949BE1A0027AD51 /* socialsudoku */ = {
 			isa = PBXGroup;
 			children = (
+				E9503342294C973A00373E43 /* Info.plist */,
 				E97FA5BD294B596300494D46 /* LeaderboardService.swift */,
 				E97FA5C1294B5AB400494D46 /* LeaderboardView.swift */,
 				E97FA5B7294B20C100494D46 /* SudokuView.swift */,
@@ -99,6 +105,7 @@
 				E97FA5A3294B081B00494D46 /* GoogleService-Info.plist */,
 				E97FA5B5294B0FA000494D46 /* AuthManager.swift */,
 				E97FA5BF294B598700494D46 /* Score.swift */,
+				E9503343294CABC200373E43 /* GoogleAuthManger.swift */,
 			);
 			path = socialsudoku;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				E97FA5AF294B0DD600494D46 /* FirebaseAuth */,
 				E97FA5B1294B0DD600494D46 /* FirebaseFirestore */,
 				E97FA5B3294B0DD600494D46 /* FirebaseFirestoreSwift */,
+				E9503340294C96F200373E43 /* GoogleSignIn */,
 			);
 			productName = socialsudoku;
 			productReference = E95B83312949BE1A0027AD51 /* socialsudoku.app */;
@@ -197,6 +205,7 @@
 			mainGroup = E95B83282949BE1A0027AD51;
 			packageReferences = (
 				E97FA5AA294B0DD600494D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E950333F294C96F200373E43 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = E95B83322949BE1A0027AD51 /* Products */;
 			projectDirPath = "";
@@ -236,6 +245,7 @@
 				E97FA5C2294B5AB400494D46 /* LeaderboardView.swift in Sources */,
 				E95B83352949BE1A0027AD51 /* socialsudokuApp.swift in Sources */,
 				E97FA5C0294B598700494D46 /* Score.swift in Sources */,
+				E9503344294CABC200373E43 /* GoogleAuthManger.swift in Sources */,
 				E912A8A92949D062008E249A /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +378,7 @@
 				DEVELOPMENT_TEAM = X4MLGR3XU7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = socialsudoku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,6 +408,7 @@
 				DEVELOPMENT_TEAM = X4MLGR3XU7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = socialsudoku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +451,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E950333F294C96F200373E43 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		E97FA5AA294B0DD600494D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -450,6 +470,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E9503340294C96F200373E43 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E950333F294C96F200373E43 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
 		E97FA5AB294B0DD600494D46 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E97FA5AA294B0DD600494D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -7,11 +7,13 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class LeaderboardService : ObservableObject {
     @Published var scores: [Score] = []
     init() {
         fetchScores()
+        incrementUserScore(email: "thomatop@gmail.com")
     }
     func fetchScores () {
         scores.removeAll()
@@ -33,5 +35,12 @@ class LeaderboardService : ObservableObject {
                 }
             }
         }
+    }
+    
+    func incrementUserScore(email: String) {
+        print("email")
+        let db = Firestore.firestore()
+        let doc = db.collection("leaderboard").document("thomatop@gmail.com")
+        doc.updateData(["score": FieldValue.increment(Int64(1))])
     }
 }

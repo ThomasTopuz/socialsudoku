@@ -8,13 +8,14 @@
 import SwiftUI
 import FirebaseCore
 import FirebaseAuth
+import GoogleSignIn
 
 struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var loginError: Bool = false
     @Binding var isLoggedIn: Bool
-
+    
     var body: some View {
         VStack {
             Spacer()
@@ -28,14 +29,13 @@ struct LoginView: View {
             Button("Login") {
                 performLogin()
                 print("HERE")
-
             }.padding(.bottom)
                 .alert("Wrong email or password", isPresented: $loginError) {
-                            Button("OK", role: .cancel) { }
-                        }
+                    Button("OK", role: .cancel) { }
+                }
             
             Button("Login With google") {
-                performLogin()
+                googleLogin()
             }
             Spacer()
         }.onAppear {
@@ -55,10 +55,14 @@ struct LoginView: View {
             }
         }
         print("HERE")
-        AuthManager().performSignIn(email:email, password: password)
+        //AuthManager().performSignIn(email:email, password: password)
     }
-}
+    
 
+    func googleLogin() {
+       // GoogleAuthManager().signIn()
+      }
+}
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(isLoggedIn: .constant(false))
